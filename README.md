@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WealthUp | Professional Financial Roadmap Dashboard
 
-## Getting Started
+WealthUp is a high-performance, production-ready financial wellness dashboard built with **Next.js 15** and **TypeScript**. It provides users with a personalized roadmap to financial independence, featuring a dynamic wealth score gauge, detailed breakdowns, and interactive investment steps.
 
-First, run the development server:
+## 🚀 Architectural Vision: Scalability & Precision
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This project has been meticulously refactored from a monolithic structure into a **decoupled, component-based architecture**. The primary goal was to ensure maximum scalability and maintainability while preserving the pixel-perfect UI/UX design.
+
+### 🏗️ Directory Structure
+```text
+├── app/                # Next.js App Router (Pages & Layouts)
+├── components/         # Atomic & Molecular UI Components
+├── consts/             # Centralized Data & Configuration
+├── types/              # Global TypeScript Interfaces
+├── utils/              # Pure Logic & Mathematical Helpers
+├── public/             # Static Assets (Images & SVGs)
+└── tailwind.config.ts  # Design System Configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💎 Component Strategy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The UI is decomposed into specialized, reusable modules:
+- **`ScoreGauge`**: A custom-engineered SVG arc that visualizes the WealthUp score with mathematical precision.
+- **`ScoreBreakdown`**: A modular grid displaying individual financial health metrics.
+- **`Step1Card`**: An interactive state-managed component for user investment commitments.
+- **`LockedStepCard`**: A reusable template for roadmap progression, emphasizing user flow.
+- **`TrajectoryCard`**: A comparison module highlighting current vs. potential financial outcomes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔍 SEO & Metadata Strategy
 
-## Learn More
+WealthUp is optimized for search engines and social sharing:
+- **Server-Side Metadata**: Leveraging Next.js `Metadata` API for dynamic title and description injection.
+- **OpenGraph & Twitter Cards**: Pre-configured for high-impact social media visibility.
+- **Semantic HTML**: Extensive use of `<article>`, `<section>`, and `aria-labels` to ensure accessibility (A11y) and SEO crawler compatibility.
+- **Font Optimization**: Utilizing `next/font` for zero-layout-shift (CLS) performance.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons/Images**: Next.js Image Optimization
+- **Deployment**: Vercel Ready
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏁 Getting Started
 
-## Deploy on Vercel
+### Prerequisites
+- Node.js 18.x or later
+- npm / pnpm / yarn
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd wealthup-main
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   pnpm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   pnpm dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+## 📈 Optimization & Performance
+
+- **Zero CSS Bloat**: Strictly adheres to the established design system without redundant style overrides.
+- **Mathematical Utilities**: Isolated SVG path calculations into pure functions for testability.
+- **Type Safety**: 100% TypeScript coverage ensuring a bug-free development experience.
+
+---
+
+*WealthUp - Empowering your financial future through data-driven insights.*
