@@ -14,7 +14,7 @@ export default function WealthUpPage() {
     <div className="min-h-screen pb-16 bg-gradient-to-br from-[#ECF4FB] to-[#F8FAFC] font-['Urbanist',sans-serif]">
       <Header />
 
-      <main className="flex flex-col items-start gap-8 w-[1307px] mx-auto mt-[55px]">
+      <main className="flex flex-col items-start gap-8 w-full max-w-[1307px] mx-auto mt-8 lg:mt-[55px] px-4 lg:px-0">
         <WelcomeHeader name="Ankit" age={28} />
         <ScoreOverviewSection />
         <RoadmapSection />
